@@ -1,5 +1,11 @@
 # DB Benchmarking
 
+## Install
+
+- `git clone https://github.com/kadukeitor/db-benchmarking.git`
+- `cd db-benchmarking`
+- `npm install`
+
 ## Configuration
 
 Copy the file `<source>.json.dist` to `<source>.json` and set your params.
