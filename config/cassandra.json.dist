@@ -1,7 +1,7 @@
 {
   "servers": [],
   "keyspace": "",
-  "table": "",
+  "table": "users",
   "username": "",
   "password": ""
 }

@@ -31,6 +31,7 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 - cassandra
 - sqlite
 - mysql
+- redis
 
 ### Options
 
@@ -38,6 +39,8 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 - `-d` documents (optional)
 
 ### Examples
+
+We use the source mongodb as example in all the operations
 
 #### Write
 
