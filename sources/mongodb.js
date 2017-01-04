@@ -22,11 +22,11 @@ module.exports = function (params) {
         callback(null);
     }
 
-    function insert(db, params, callback) {
+    function write(db, params, callback) {
         var iterations = params.iterations;
         var workers = params.workers;
         var bars = [];
-        console.log('\n inserting ' + iterations * workers + ' docs with ' + workers + ' worker(s)\n');
+        console.log('\n writing ' + iterations * workers + ' docs with ' + workers + ' worker(s)\n');
         async.eachOf(new Array(workers), function (value, index, callback) {
             bars[index] = multi.newBar('  worker ' + (index + 1) + ' [:bar] :elapsed :percent :etas', {
                 width: 20,
@@ -98,7 +98,7 @@ module.exports = function (params) {
     return {
         connect: connect,
         schema: schema,
-        insert: insert,
+        write: write,
         read: read,
         remove: remove,
         count: count,

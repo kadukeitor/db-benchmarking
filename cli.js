@@ -11,13 +11,31 @@ program
 var valid = false;
 
 program
-    .command('insert <source>')
+    .command('connect <source>')
+    .action(function (source, options) {
+        var db = require('./sources/' + source)();
+        var start = new Date();
+        valid = true;
+        db.connect(function (err, conn) {
+            if (err) {
+                console.log('\n error \n');
+                console.log(err);
+                console.log('\n\n');
+            }
+            var end = new Date() - start;
+            console.log('\n done in %dms\n', end);
+            process.exit();
+        });
+    });
+
+program
+    .command('write <source>')
     .action(function (source) {
         var db = require('./sources/' + source)();
         valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
-            db.insert(conn, {
+            db.write(conn, {
                 iterations: parseInt(program.documents),
                 workers: parseInt(program.workers)
             }, function (err) {

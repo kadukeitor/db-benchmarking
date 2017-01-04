@@ -19,7 +19,7 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 ### Operations
 
 - schema
-- insert
+- write
 - read
 - count
 - remove
@@ -39,12 +39,12 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 
 ### Examples
 
-#### Insert
+#### Write
 
-Insert -d documents by each -w worker on the table/collection
+Write -d documents by each -w worker on the table/collection
 
 `
-./cli.js insert mongodb -w 5 -d 1000
+./cli.js write mongodb -w 5 -d 1000
 `
 
 #### Read
