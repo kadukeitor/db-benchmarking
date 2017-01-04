@@ -29,6 +29,8 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 
 - mongodb
 - cassandra
+- sqlite
+- mysql
 
 ### Options
 
