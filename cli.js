@@ -5,13 +5,16 @@ var program = require('commander');
 program
     .version('0.0.1')
     .usage('<source> <operation> [options]')
-    .option('-d, --documents <n>', 'The max documents to read [1000]', 1000)
+    .option('-d, --documents <n>', 'The max documents to process', 1000)
     .option('-w, --workers <n>', 'The number of workers [1]', 1);
+
+var valid = false;
 
 program
     .command('insert <source>')
     .action(function (source) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.insert(conn, {
@@ -34,6 +37,7 @@ program
     .command('read <source>')
     .action(function (source) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.read(conn, {
@@ -56,6 +60,7 @@ program
     .command('remove <source>')
     .action(function (source, options) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.remove(conn, function (err, result) {
@@ -75,6 +80,7 @@ program
     .command('count <source>')
     .action(function (source, options) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.count(conn, function (err, result) {
@@ -95,6 +101,7 @@ program
     .command('schema <source>')
     .action(function (source, options) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.schema(conn, function (err) {
@@ -114,6 +121,7 @@ program
     .command('drop <source>')
     .action(function (source, options) {
         var db = require('./sources/' + source)();
+        valid = true;
         db.connect(function (err, conn) {
             var start = new Date();
             db.drop(conn, function (err, result) {
@@ -132,5 +140,5 @@ program
 program
     .parse(process.argv);
 
-if (!program.args.length) program.help();
+if (!program.args.length || !valid) program.help();
 

@@ -7,7 +7,7 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 ## How to Use
 
 `
-./cli.js <operation> <source> -w <workers> -i <iterations>
+./cli.js <operation> <source> -w <workers> -d <documents>
 `
 
 ### Operations
@@ -27,17 +27,21 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 ### Options
 
 - `-w` workers (optional)
-- `-i` iterations (optional)
+- `-d` documents (optional)
 
 ### Examples
 
 #### Insert
 
+Insert -d documents by each -w worker on the table/collection
+
 `
-./cli.js insert mongodb -w 5
+./cli.js insert mongodb -w 5 -d 1000
 `
 
 #### Read
+
+Read -d documents by each -w worker on the table/collection
 
 `
 ./cli.js read mongodb -d 1000
@@ -45,11 +49,15 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 
 #### Count
 
+Count the number of documents/rows on the table/collection
+
 `
 ./cli.js count mongodb
 `
 
 #### Remove
+
+Remove all documents/rows on the table/collection
 
 `
 ./cli.js remove mongodb
@@ -57,11 +65,16 @@ Copy the file `<source>.json.dist` to `<source>.json` and set your params.
 
 #### Schema
 
+Create the table/collection schema
+
 `
 ./cli.js schema mongodb
 `
 
 #### Remove
 
+Drop the table/collection
+
 `
 ./cli.js drop mongodb
+`
