@@ -1,0 +1,26 @@
+{
+  "name": "db-benchmarking",
+  "version": "1.0.0",
+  "description": "Database benchmarking tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {},
+  "dependencies": {
+    "async": "^2.1.4",
+    "cassandra-driver": "^3.1.6",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "express": "^4.14.0",
+    "faker": "^3.1.0",
+    "mongodb": "^2.2.18",
+    "multi-progress": "^2.0.0",
+    "mysql": "^2.12.0",
+    "progress": "^1.1.8",
+    "socket.io": "^1.7.2",
+    "sqlite3": "^3.1.8"
+  }
+}
