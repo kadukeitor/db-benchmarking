@@ -21,7 +21,7 @@ module.exports = function (params) {
         var iterations = params.iterations;
         var workers = params.workers;
         var bars = [];
-        console.log('\n writing ' + iterations * workers + ' docs with ' + workers + ' worker(s)\n');
+        console.log('\n writing ' + iterations * workers + ' keys with ' + workers + ' worker(s)\n');
         async.eachOf(new Array(workers), function (value, index, callback) {
             bars[index] = multi.newBar('  worker ' + (index + 1) + ' [:bar] :elapsed :percent :etas', {
                 width: 20,
@@ -57,7 +57,7 @@ module.exports = function (params) {
         var documents = params.documents;
         var workers = params.workers;
         var bars = [];
-        console.log('\n reading ' + documents + ' docs with ' + workers + ' worker(s)\n');
+        console.log('\n reading all keys with ' + workers + ' worker(s)\n');
         async.eachOf(new Array(workers), function (value, index, callback) {
             bars[index] = multi.newBar('  worker ' + (index + 1) + ' [:bar] :elapsed :percent :etas', {
                 width: 20,

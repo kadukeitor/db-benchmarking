@@ -46,6 +46,8 @@ We use the source mongodb as example in all the operations
 
 Write -d documents by each -w worker on the table/collection
 
+![Write](./github/write.gif?raw=true "Write")
+
 `
 ./cli.js write mongodb -w 5 -d 1000
 `
@@ -53,6 +55,8 @@ Write -d documents by each -w worker on the table/collection
 #### Read
 
 Read -d documents by each -w worker on the table/collection
+
+![Read](./github/read.gif?raw=true "Read")
 
 `
 ./cli.js read mongodb -d 1000

@@ -49,6 +49,7 @@ module.exports = function (params) {
                         faker.phone.phoneNumber()
                     ], function (err, result) {
                         count++;
+
                         bars[index].tick(1);
                         callback(err, result);
                     });
