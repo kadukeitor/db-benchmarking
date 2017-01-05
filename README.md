@@ -1,5 +1,7 @@
 # DB Benchmarking
 
+Simple database benchmarking tool.
+
 ![Write](./.github/write.gif?raw=true "Write")
 
 ## Install
