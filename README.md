@@ -8,11 +8,11 @@ Simple database benchmarking tool.
 
 - `git clone https://github.com/kadukeitor/db-benchmarking.git`
 - `cd db-benchmarking`
-- `npm install`
+- `npm install`s
 
 ## Configuration
 
-Copy the file `<source>.json.dist` to `<source>.json` and set your params.
+Copy the file `config/<source>.json.dist` to `config/<source>.json` and set your params.
 
 ## How to Use
 
