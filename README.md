@@ -56,8 +56,6 @@ Write -d documents by each -w worker on the table/collection
 
 Read -d documents by each -w worker on the table/collection
 
-![Read](./.github/read.gif?raw=true "Read")
-
 `
 ./cli.js read mongodb -d 1000
 `
