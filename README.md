@@ -1,5 +1,7 @@
 # DB Benchmarking
 
+![Write](./.github/write.gif?raw=true "Write")
+
 ## Install
 
 - `git clone https://github.com/kadukeitor/db-benchmarking.git`
@@ -45,8 +47,6 @@ We use the source mongodb as example in all the operations
 #### Write
 
 Write -d documents by each -w worker on the table/collection
-
-![Write](./.github/write.gif?raw=true "Write")
 
 `
 ./cli.js write mongodb -w 5 -d 1000
